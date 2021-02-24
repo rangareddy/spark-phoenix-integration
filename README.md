@@ -3,22 +3,23 @@
 ## Spark Phoenix Connector example in CDP
 
 ### Launch Phoenix Shell
-```
+```sh
 python /opt/cloudera/parcels/CDH/lib/phoenix/bin/sqlline.py
 ```
 
 ### Creating Phoenix table
-```
-CREATE TABLE IF NOT EXISTS EMPLOYEE (ID BIGINT NOT NULL, 
-                                     NAME VARCHAR, 
-                                     AGE INTEGER, 
-                                     SALARY FLOAT
-                                     CONSTRAINT emp_pk PRIMARY KEY (ID)
-                                    );
+```sql
+CREATE TABLE IF NOT EXISTS EMPLOYEE (
+  ID BIGINT NOT NULL, 
+  NAME VARCHAR, 
+  AGE INTEGER, 
+  SALARY FLOAT
+  CONSTRAINT emp_pk PRIMARY KEY (ID)
+);
 ```
 
 ### Inserting data to Phoenix table
-```sh
+```sql
 UPSERT INTO EMPLOYEE (ID, NAME, AGE, SALARY) VALUES (1, 'Ranga', 32, 10000);
 UPSERT INTO EMPLOYEE (ID, NAME, AGE, SALARY) VALUES (2, 'Nishanth', 2, 30000);
 UPSERT INTO EMPLOYEE (ID, NAME, AGE, SALARY) VALUES (3, 'Raja', 52, 60000);
@@ -46,7 +47,7 @@ val sqlContext = new SQLContext(sc)
 
 val df = sqlContext.load(
   "org.apache.phoenix.spark",
-  Map("table" -> "EMPLOYEE", "zkUrl" -> "	c4543-node4.coelab.cloudera.com:2181")
+  Map("table" -> "EMPLOYEE", "zkUrl" -> "c4543-node4.coelab.cloudera.com:2181")
 )
 
 df.show(4)
