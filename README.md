@@ -5,14 +5,6 @@ The following example demonstrate the **Spark Phoenix** integration
 * [CDP Integration](#cdp)
 * [HDP Integration](#hdp)
 
-# Titles 
-
-### Title 1
-### Title 2
-
-# Paragraph
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum, nibh eu commodo posuere, ligula ante dictum neque, vitae pharetra mauris mi a velit. Phasellus eleifend egestas diam, id tincidunt arcu dictum quis. Pellentesque eu dui tempus, tempus massa sed
-
 # CDP
 
 ### Step1: Launch Phoenix Shell
