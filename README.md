@@ -67,9 +67,14 @@ _________________
 
 # HDP
 
+
+```sh
+export JAVA_HOME=/usr/jdk64/jdk1.8.0_112/
+```
+
 ### Step1: Launch Phoenix Shell
 ```sh
-python /opt/cloudera/parcels/CDH/lib/phoenix/bin/sqlline.py
+python /usr/hdp/current/phoenix-client/bin/sqlline.py
 ```
 
 ### Step2: Creating Phoenix table
@@ -101,8 +106,8 @@ SELECT * FROM EMPLOYEE;
 ```sh
 sudo -u spark spark-shell \
   --master yarn \
-  --conf "spark.executor.extraClassPath=/opt/cloudera/parcels/CDH/lib/phoenix/lib/phoenix-spark-5.0.0.7.1.4.0-203.jar:/opt/cloudera/parcels/CDH/lib/phoenix/phoenix-client.jar:/opt/cloudera/parcels/CDH/lib/hbase/conf/hbase-site.xml" \
-  --conf "spark.driver.extraClassPath=/opt/cloudera/parcels/CDH/lib/phoenix/lib/phoenix-spark-5.0.0.7.1.4.0-203.jar:/opt/cloudera/parcels/CDH/lib/phoenix/phoenix-client.jar:/opt/cloudera/parcels/CDH/lib/hbase/conf/hbase-site.xml"
+  --conf "spark.executor.extraClassPath=/usr/hdp/current/phoenix-client/lib/phoenix-spark-5.0.0.3.1.5.79-2.jar:/usr/hdp/current/phoenix-client/phoenix-client.jar:/usr/hdp/current/hbase-client/conf/hbase-site.xml" \
+  --conf "spark.driver.extraClassPath=/usr/hdp/current/phoenix-client/lib/phoenix-spark-5.0.0.3.1.5.79-2.jar:/usr/hdp/current/phoenix-client/phoenix-client.jar:/usr/hdp/current/hbase-client/conf/hbase-site.xml"
 ```
 
 ### Step6: Run the Spark code in spark-shell
