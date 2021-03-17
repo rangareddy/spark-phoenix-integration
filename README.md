@@ -39,11 +39,11 @@ SELECT * FROM EMPLOYEE;
 ```
 
 ### Step5: Launch Spark-shell
-```sh
+```sh  
 sudo -u spark spark-shell \
   --master yarn \
-  --conf "spark.executor.extraClassPath=/opt/cloudera/parcels/CDH/lib/phoenix/lib/phoenix-spark-5.0.0.7.1.4.0-203.jar:/opt/cloudera/parcels/CDH/lib/phoenix/phoenix-client.jar:/opt/cloudera/parcels/CDH/lib/hbase/conf/hbase-site.xml" \
-  --conf "spark.driver.extraClassPath=/opt/cloudera/parcels/CDH/lib/phoenix/lib/phoenix-spark-5.0.0.7.1.4.0-203.jar:/opt/cloudera/parcels/CDH/lib/phoenix/phoenix-client.jar:/opt/cloudera/parcels/CDH/lib/hbase/conf/hbase-site.xml"
+  --jars /opt/cloudera/parcels/CDH/lib/phoenix/lib/phoenix-spark*.jar,/opt/cloudera/parcels/CDH/lib/phoenix/phoenix-client.jar \
+  --files /etc/hbase/conf/hbase-site.xml
 ```
 
 ### Step6: Run the Spark code in spark-shell
@@ -154,10 +154,10 @@ ROW                                             COLUMN+CELL
 
 ### Step7: Launch the spark-shell
 ```sh
-spark-shell \
+sudo -u spark spark-shell \
   --master yarn \
-  --conf "spark.executor.extraClassPath=/usr/hdp/current/phoenix-client/lib/phoenix-spark*.jar:/usr/hdp/current/phoenix-client/phoenix-client.jar:/usr/hdp/current/hbase-client/conf/hbase-site.xml" \
-  --conf "spark.driver.extraClassPath=/usr/hdp/current/phoenix-client/lib/phoenix-spark*.jar:/usr/hdp/current/phoenix-client/phoenix-client.jar:/usr/hdp/current/hbase-client/conf/hbase-site.xml"
+  --jars /usr/hdp/current/phoenix-client/lib/phoenix-spark*.jar,/usr/hdp/current/phoenix-client/phoenix-client.jar \
+  --files /etc/hbase/conf/hbase-site.xml
 ```
 
 ### Step8: Run the Spark code in spark-shell
@@ -285,8 +285,8 @@ ROW                                             COLUMN+CELL
 ```sh
 spark-shell \
   --master yarn \
-  --conf "spark.executor.extraClassPath=/usr/hdp/current/phoenix-client/lib/phoenix-spark*.jar:/usr/hdp/current/phoenix-client/phoenix-client.jar:/usr/hdp/current/hbase-client/conf/hbase-site.xml" \
-  --conf "spark.driver.extraClassPath=/usr/hdp/current/phoenix-client/lib/phoenix-spark*.jar:/usr/hdp/current/phoenix-client/phoenix-client.jar:/usr/hdp/current/hbase-client/conf/hbase-site.xml"
+  --jars /usr/hdp/current/phoenix-client/lib/phoenix-spark*.jar,/usr/hdp/current/phoenix-client/phoenix-client.jar \
+  --files /etc/hbase/conf/hbase-site.xml
 ```
 
 ### Step9: Run the Spark code in spark-shell
