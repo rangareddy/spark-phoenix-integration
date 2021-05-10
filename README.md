@@ -22,7 +22,7 @@ python /opt/cloudera/parcels/CDH/lib/phoenix/bin/sqlline.py
 
 ### Step2: Create an EMPLOYEE table in Phoenix
 ```sql
-CREATE TABLE IF NOT EXISTS EMPLOYEE (
+> CREATE TABLE IF NOT EXISTS EMPLOYEE (
   ID BIGINT NOT NULL, 
   NAME VARCHAR, 
   AGE INTEGER, 
@@ -53,7 +53,6 @@ UPSERT INTO EMPLOYEE (ID, NAME, AGE, SALARY) VALUES (2, 'Nishanth', 2, 30000);
 UPSERT INTO EMPLOYEE (ID, NAME, AGE, SALARY) VALUES (3, 'Raja', 52, 60000);
 UPSERT INTO EMPLOYEE (ID, NAME, AGE, SALARY) VALUES (4, 'Yashu', 10, 8000);
 UPSERT INTO EMPLOYEE (ID, NAME, AGE, SALARY) VALUES (5, 'Manoj', 16, 15000);
-SELECT * FROM EMPLOYEE;
 ```
 
 ### Step5: Select the Employee data
@@ -153,7 +152,7 @@ python /usr/hdp/current/phoenix-client/bin/sqlline.py
 
 ### Step2: Create an EMPLOYEE table in Phoenix
 ```sql
-CREATE TABLE IF NOT EXISTS EMPLOYEE (
+> CREATE TABLE IF NOT EXISTS EMPLOYEE (
   ID BIGINT NOT NULL, 
   NAME VARCHAR, 
   AGE INTEGER, 
@@ -286,7 +285,7 @@ python /usr/hdp/current/phoenix-client/bin/sqlline.py
 
 ### Step3: Create an EMPLOYEE table in Phoenix
 ```sql
-CREATE TABLE IF NOT EXISTS EMPLOYEE (
+> CREATE TABLE IF NOT EXISTS EMPLOYEE (
   ID BIGINT NOT NULL, 
   NAME VARCHAR, 
   AGE INTEGER, 
