@@ -9,9 +9,9 @@ The phoenix-spark plugin extends Phoenix’s MapReduce support to allow Spark to
 
 The following example demonstrate the **Spark Phoenix** integration
 
-* [CDP Integration](#cdp)
-* [HDP Integration](#hdp)
-* [HDP Kerberized Integration](#hdp-kerberized)
+* [CDP Integration](#cdp-integration)
+* [HDP Integration](#hdp-integration)
+* [HDP Kerberized Integration](#hdp-kerberized-integration)
 
 ## CDP Integration
 
@@ -411,3 +411,4 @@ _________________
 * https://blogs.apache.org/phoenix/entry/spark_integration_in_apache_phoenix
 * https://phoenix.apache.org/phoenix_spark.html
 * https://docs.cloudera.com/runtime/7.2.9/phoenix-access-data/topics/phoenix-understanding-spark-connector.html
+* https://docs.cloudera.com/documentation/enterprise/6/6.3/topics/phoenix_spark_connector.html
